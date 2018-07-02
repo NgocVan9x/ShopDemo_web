@@ -159,5 +159,6 @@ module.exports = {
     port: DEV_SERVER_PORT,
     historyApiFallback: true,
     open: true,
+    disableHostCheck: true,
   },
 };
