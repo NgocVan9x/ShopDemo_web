@@ -24,5 +24,5 @@ const NotFound = ({ location }) =>
         </div>
       </div>
     </section>
-   </div>);
+  </div>);
 export default NotFound;

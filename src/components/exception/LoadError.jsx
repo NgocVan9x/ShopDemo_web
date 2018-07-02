@@ -14,5 +14,5 @@ const LoadError = (props) =>
         </div>
       </div>
     </section>
-  </div>);
+   </div>);
 export default LoadError;
