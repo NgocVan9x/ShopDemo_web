@@ -7,7 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const DEV_SERVER_PORT = 3000;
+const DEV_SERVER_PORT = 4000;
 
 let constants = {};
 if (config.util.getEnv('NODE_ENV') === 'production') {
