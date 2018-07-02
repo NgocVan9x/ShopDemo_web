@@ -79,23 +79,31 @@ if (config.util.getEnv('NODE_ENV') === 'production') {
   plugins.push(new OptimizeCSSAssetsPlugin({}));
 }
 module.exports = {
+  mode: 'development',
+  entry: {
+    index: './src/index.jsx',
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
   optimization: {
-    runtimeChunk: 'single',
+    // runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
-      cacheGroups: {
-        default: {
-          enforce: true,
-          priority: 1,
-        },
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: 2,
-          name: 'vendors',
-          enforce: true,
-          chunks: 'all',
-        },
-      },
+      // cacheGroups: {
+      //   default: {
+      //     enforce: true,
+      //     priority: 1,
+      //   },
+      //   vendors: {
+      //     test: /[\\/]node_modules[\\/]/,
+      //     priority: 2,
+      //     name: 'vendors',
+      //     enforce: true,
+      //     chunks: 'all',
+      //   },
+      // },
     },
   },
   resolve: {
